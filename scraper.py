@@ -9,14 +9,17 @@ class Scraper(metaclass=ABCMeta):
 
     @abstractmethod
     def get_article_urls(self, soup):
+        """ returns urls of articles on page """
         pass
 
     @abstractmethod
     def get_article_text(self, url):
+        """ returns articles text given the url """
         pass
 
     @abstractmethod
     def page_generator(self):
+        """ yields soup for all pages with articles """
         pass
 
     def scrape(self):
